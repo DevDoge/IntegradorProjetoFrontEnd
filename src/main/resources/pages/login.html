@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login</title>
+
+        <!-- Font Google -->
+
+        <!-- BootStrap -->
+        <link href="/../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/../../../bootstrap/js/bootstrap.min.js"></script>
+
+        <link href="/../../../bootstrap/css/myStyle.css" rel="stylesheet">
+
+
+        <style>
+            body {
+                background: url(/img/background.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="hero">
+            <div class="form-box">
+
+
+
+                <div class="social-icons">
+                    <a href="https://twitter.com/"><img src="/img/tw.png" alt="Twitter"></a>
+                    <a href="https://google.com/"><img src="/img/gp.png" alt="Google"></a>
+                    <a href="https://facebook.com/"><img src="/img/fb.png" alt="Facebook"></a>
+                </div>
+
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Entrar</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Cadastrar</button>
+                </div>
+
+                <form id="login" class="input-group">
+                    <label>
+                        <input type="email" class="input-field" placeholder="E-mail" required>
+                        <input type="password" class="input-field" placeholder="Senha" required>
+                        <input type="checkbox" class="check-box"><span>Lembre de mim</span>
+                        <button type="submit" class="submit-btn">Enviar</button>
+                    </label>
+                </form>
+
+                <form id="register" class="input-group">
+                    <label>
+                        <input type="text" class="input-field" placeholder="Nome" required>
+                        <input type="email" class="input-field" placeholder="E-mail" required>
+                        <input type="password" class="input-field" placeholder="Senha" required>
+                        <input type="checkbox" class="check-box"><span>Aceito os termos e condições</span>
+                        <button type="submit" class="submit-btn">Registrar</button>
+                    </label>
+                </form>
+            </div>
+
+        </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+
+    </body>
+
+</html>
