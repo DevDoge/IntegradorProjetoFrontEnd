@@ -116,21 +116,32 @@ body{
     transition: .5s;
 }
 
+
+
+
 /*Navgator/Sidebar*/
+
+
 .sidebar{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 350px;
-    margin-left: -45px;
+    margin-left: -38px;
     background: linear-gradient(to right, #ff105f, #ffad06);
-    padding: 6px 14px;
+    padding: 6px 10px;
     transition: all 0.5s ease;
 }
 
+.sidebar .nav-lista{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
 .sidebar.active{
-    width: 102px;
+    width: 100px;
 }
 
 .sidebar .logo-content .logo{
@@ -151,6 +162,7 @@ body{
     font-size: 28px;
     margin-right: 5px;
 }
+
 .sidebar .logo{
     margin-left: 50px;
 }
@@ -158,7 +170,6 @@ body{
 .logo-content .logo .logo-name{
     font-size: 20px;
     font-weight: 400;
-
 }
 
 .sidebar #btn-menu{
@@ -191,24 +202,59 @@ body{
     line-height: 25px;
 }
 
-.sidebar ul li .tooltip{
+.sidebar ul li .tooltip {
     position: absolute;
-    left: 122px;
+    left: 60px;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-53%);
     border-radius: 6px;
     height: 35px;
     width: 122px;
     background: #fff;
     line-height: 35px;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffad06, #ff105f);
     transition: 0s;
     opacity: 0;
     pointer-events: none;
+    display: none;
+}
+
+.sidebar.active ul li .tooltip{
+    display: block;
 }
 
 .sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+
+.sidebar .profile a .tooltip {
+    position: absolute;
+    left: 67px;
+    top: 0;
+    transform: translateY(-53%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffad06, #ff105f);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.sidebar.active .profile a .tooltip{
+    display: block;
+}
+
+.sidebar .profile a:hover .tooltip{
     transition: all 0.5s ease;
     opacity: 1;
     top: 50%;
@@ -237,13 +283,18 @@ body{
     font-size: 22px;
 }
 
-.sidebar ul li a{
+.sidebar ul li .bx-search-alt:hover{
+    color: #0a53be;
+}
+
+.sidebar a{
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: all 0.07s ease;
     border-radius: 12px;
+    white-space: nowrap;
 }
 
 .sidebar ul li a:hover{
@@ -260,19 +311,35 @@ body{
     margin-right: 5px;
 }
 
+.sidebar .link-name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar.active .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
 .sidebar .profile-content{
     position: absolute;
     color: #fff;
     bottom: 0;
-    left: 45px;
+    left: 38px;
 }
 
 .sidebar .profile-content .profile{
     position: relative;
     padding: 10px 6px;
     height: 80px;
-    width: 305px;
+    width: 312px;
     background: linear-gradient(to right, #ffad06, #ff105f);
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .profile-content .profile{
+    width: 62px;
+    transition: all 0.5s ease;
 
 }
 
@@ -280,6 +347,15 @@ body{
     display: flex;
     align-items: center;
     margin: 10px;
+    opacity: 1;
+    pointer-events: auto;
+    white-space: nowrap;
+}
+
+
+.sidebar.active .profile .profile-details{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .profile .profile-details img{
@@ -292,7 +368,6 @@ body{
 
 .profile .profile-details .name-job{
     margin-left: 10px;
-
 }
 
 .profile .profile-details .name{
@@ -307,7 +382,7 @@ body{
 .profile #log-out{
     position: absolute;
     left: 95%;
-    bottom: 5px;
+    bottom: 12px;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
@@ -315,11 +390,26 @@ body{
     border-radius: 12px;
 }
 
+.sidebar.active .profile #log-out{
+    transition: all 0.5s ease;
+    left: 70%;
+}
+.profile .bx-log-out:hover{
+    color: #0a53be;
+}
+
 .home-content{
     position: absolute;
     height: 100%;
-    width: calc(100% - 350px);
     left: 310px;
+    width: calc(100% - 310px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar.active ~ .home-content{
+    left: 62px;
+    width: calc(100% - 62px);
 }
 
 .home-content .texto{
