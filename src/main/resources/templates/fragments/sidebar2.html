@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Lucas">
+    <title>Sidebar</title>
+
+    <!-- BootStrap -->
+    <link href="/../../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/../../../bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--MyCSS / JS-->
+    <link href="/../../../bootstrap/css/myStyle-2.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-battery-low'></i></span>
+                        <span class="title">Projeto</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-dashboard'></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-user'></i></span>
+                        <span class="title">Usuário</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-transfer-alt'></i></span>
+                        <span class="title">Transações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-coin-stack'></i></span>
+                        <span class="title">Receitas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-x-circle'></i></span>
+                        <span class="title">Despesas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-notepad'></i></span>
+                        <span class="title">Contas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-cog' ></i></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <div class="main">
+            <div class="top-bar">
+                <div class="toggle">
+                    <i class='bx bx-menu' id="btn-menu"></i>
+                </div>
+                <!-- Search -->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Busca">
+                        <i class='bx bx-search-alt'></i>
+                    </label>
+                </div>
+
+                <!-- User Image -->
+                <div class="user">
+                    <img src="/img/background.jpg" alt=" ">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //menu toggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function (){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) => item.addEventListener('mouseover', activeLink));
+    </script>
+
+</body>
+</html>
