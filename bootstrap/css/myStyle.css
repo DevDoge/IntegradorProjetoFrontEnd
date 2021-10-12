@@ -417,3 +417,24 @@ body{
     color: #1d1b1c;
     margin: 12px;
 }
+
+/* Dashboard */
+
+.dash-box{
+    width: 80%;
+    height: 90%;
+    position: relative;
+    margin: 1.7% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    justify-content: center
+
+}
+
+.select-month{
+    position: relative;
+    text-align:center;
+}
+
