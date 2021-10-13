@@ -18,6 +18,17 @@
     <!--MyCSS / JS-->
     <link href="/../../../bootstrap/css/myStyle-2.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $('#dashboard').load("../pages/dashboard.html");
+        });
+
+    </script>
+
+
 </head>
 <body>
     <div class="myContainer">
@@ -30,19 +41,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('dashboard', 'conteudo')">
                         <span class="icon"><i class='bx bxs-dashboard'></i></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('contentA', 'conteudo')">
                         <span class="icon"><i class='bx bx-user'></i></span>
                         <span class="title">Usuário</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('contentB', 'conteudo')">
                         <span class="icon"><i class='bx bx-transfer-alt'></i></span>
                         <span class="title">Transações</span>
                     </a>
@@ -75,116 +86,9 @@
         </div>
 
         <!-- Main -->
-        <div class="main">
-            <div class="top-bar">
-                <div class="toggle">
-                    <i class='bx bx-menu' id="btn-menu"></i>
-                </div>
-                <!-- Search -->
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Busca">
-                        <i class='bx bx-search-alt'></i>
-                    </label>
-                </div>
-
-                <!-- User Image -->
-                <div class="user">
-                    <img src="/img/background.jpg" alt=" ">
-                </div>
-            </div>
-
-            <!-- Cards -->
-            <div class="card-box">
-                <div class="cards">
-                    <div>
-                        <div class="numbers">1,99</div>
-                        <div class="card-name">Caixa</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-dollar' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">10</div>
-                        <div class="card-name">Fontes de renda</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-archive-in' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">8000+</div>
-                        <div class="card-name">Despesas fixas</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-dollar' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">9000,99</div>
-                        <div class="card-name">Dívidas</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-briefcase'></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Details list -->
-            <div class="details-list">
-                <div class="recent-orders">
-                    <div class="cards-header">
-                        <h2>Pedidos recentes</h2>
-                        <a href="#" class="btn-box">Ver tudo</a>
-                    </div>
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>Nome</td>
-                            <td>Preço</td>
-                            <td>Pagamento</td>
-                            <td>Status</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status delivered">Entregue</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status pending">Pendente</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status return">Retornado</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status inProgress">Processando</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-
-        </div>
+        <section id="conteudo" class="main">
+            <div id="dashboard"></div>
+        </section>
     </div>
 
     <script>
@@ -207,6 +111,8 @@
         }
         list.forEach((item) => item.addEventListener('mouseover', activeLink));
     </script>
+
+    <script src="./js/no_refresh.js"></script>
 
 </body>
 </html>
