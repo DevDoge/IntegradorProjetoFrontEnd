@@ -17,6 +17,7 @@
 
     <!--MyCSS / JS-->
     <link href="/../../../bootstrap/css/myStyle-2.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="myContainer">
@@ -29,19 +30,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('dashboard', 'conteudo')">
                         <span class="icon"><i class='bx bxs-dashboard'></i></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('contentA', 'conteudo')">
                         <span class="icon"><i class='bx bx-user'></i></span>
                         <span class="title">Usuário</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a onclick="openPage('contentB', 'conteudo')">
                         <span class="icon"><i class='bx bx-transfer-alt'></i></span>
                         <span class="title">Transações</span>
                     </a>
@@ -74,161 +75,7 @@
         </div>
 
         <!-- Main -->
-        <div class="main">
-            <div class="top-bar">
-                <div class="toggle">
-                    <i class='bx bx-menu' id="btn-menu"></i>
-                </div>
-                <!-- Search -->
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Busca">
-                        <i class='bx bx-search-alt'></i>
-                    </label>
-                </div>
 
-                <!-- User Image -->
-                <div class="user">
-                    <img src="/img/profile-backImage.png" alt=" ">
-                </div>
-            </div>
-
-            <!-- Cards -->
-            <div class="card-box">
-                <div class="cards">
-                    <div>
-                        <div class="numbers">1,99</div>
-                        <div class="card-name">Caixa</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-dollar' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">10</div>
-                        <div class="card-name">Fontes de renda</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-archive-in' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">8000+</div>
-                        <div class="card-name">Despesas fixas</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-dollar' ></i>
-                    </div>
-                </div>
-
-                <div class="cards">
-                    <div>
-                        <div class="numbers">9000,99</div>
-                        <div class="card-name">Dívidas</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class='bx bx-briefcase'></i>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="details-list">
-                <!-- Details list -->
-                <div class="recent-orders">
-                    <div class="cards-header">
-                        <h2>Pedidos recentes</h2>
-                        <a href="#" class="btn-box">Ver tudo</a>
-                    </div>
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>Nome</td>
-                            <td>Preço</td>
-                            <td>Pagamento</td>
-                            <td>Status</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status delivered">Entregue</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status pending">Pendente</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status return">Retornado</span></td>
-                        </tr>
-                        <tr>
-                            <td>Refrigerador estrela</td>
-                            <td>R$1200,00</td>
-                            <td>Pago</td>
-                            <td><span class="status inProgress">Processando</span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- New customers -->
-                <div class="recent-customers">
-                    <div class="cards-header">
-                        <h2>Clientes recentes</h2>
-                    </div>
-                    <table>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img1.jpg"></div></td>
-                            <td><h4>David<br><span>Italia</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img2.jpg"></div></td>
-                            <td><h4>Mohammed<br><span>India</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img3.jpg"></div></td>
-                            <td><h4>Amelia<br><span>França</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img4.jpg"></div></td>
-                            <td><h4>Olivia<br><span>USA</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img5.jpg"></div></td>
-                            <td><h4>Sora<br><span>Japão</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img6.jpg"></div></td>
-                            <td><h4>Ashraf<br><span>Nepal</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img7.jpg"></div></td>
-                            <td><h4>Diana<br><span>Malasya</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img8.jpg"></div></td>
-                            <td><h4>Amit<br><span>Emirados Árabes</span></h4></td>
-                        </tr>
-                        <tr>
-                            <td width="60px"><div class="imgBx"><img src="/img/img9.jpg"></div></td>
-                            <td><h4>Shiro<br><span>Coreia do Sul</span></h4></td>
-                        </tr>
-                    </table>
-                </div>
-
-            </div>
-        </div>
     </div>
 
     <script>
@@ -251,6 +98,8 @@
         }
         list.forEach((item) => item.addEventListener('mouseover', activeLink));
     </script>
+
+    <script src="./js/no_refresh.js"></script>
 
 </body>
 </html>
