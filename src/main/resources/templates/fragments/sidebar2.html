@@ -18,6 +18,16 @@
     <!--MyCSS / JS-->
     <link href="/../../../bootstrap/css/myStyle-2.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $('#dashboard').load("../pages/dashboard.html");
+        });
+
+    </script>
+
 </head>
 <body>
     <div class="myContainer">
@@ -74,8 +84,9 @@
             </ul>
         </div>
 
-        <!-- Main -->
-
+        <section id="conteudo" class="main">
+            <div id="dashboard"></div>
+        </section>
     </div>
 
     <script>
